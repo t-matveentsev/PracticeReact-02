@@ -8,13 +8,13 @@ const Counter = () => {
     if (counter < 1) {
       return alert("No, you can`t clicked more");
     }
-    setCounter((counter) => counter - 1);
+    setCounter((prev) => prev - 1);
   };
   const handleResetClick = () => {
     setCounter(0);
   };
   const handlePlusClick = () => {
-    setCounter((counter) => counter + 1);
+    setCounter((prev) => prev + 1);
   };
 
   return (
