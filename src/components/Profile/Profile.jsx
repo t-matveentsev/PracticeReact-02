@@ -1,4 +1,4 @@
-import { getImageUrl } from "../assets/utils.js";
+import { getImageUrl } from "../../assets/utils.js";
 
 function Profile({ person, imageSize = 70 }) {
   const imageSrc = getImageUrl(person);

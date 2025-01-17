@@ -1,5 +1,5 @@
 import s from "./ColorPicker.module.css";
-import colors from "../assets/color.json";
+import colors from "../../assets/color.json";
 import { useState } from "react";
 
 const ColorPicker = () => {

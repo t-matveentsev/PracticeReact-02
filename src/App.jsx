@@ -1,6 +1,7 @@
-import Gallery from "./Gallery/Gallery";
-import Counter from "./Counter/Counter";
-import ColorPicker from "./ColorPicker/ColorPicker";
+import Gallery from "./components/Gallery/Gallery";
+import Counter from "./components/Counter/Counter";
+import ColorPicker from "./components/ColorPicker/ColorPicker";
+import TodoList from "./components/TodoList/TodoList";
 
 export default function App() {
   return (
@@ -8,6 +9,7 @@ export default function App() {
       <Gallery />
       <Counter />
       <ColorPicker />
+      <TodoList />
     </div>
   );
 }

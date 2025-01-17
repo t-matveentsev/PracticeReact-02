@@ -2,7 +2,7 @@ import { useState } from "react";
 import s from "./Counter.module.css";
 
 const Counter = () => {
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(0); // хук який дохзволяє нам зберігати та оновлювати значення
 
   const handleMinusClick = () => {
     if (counter < 1) {
