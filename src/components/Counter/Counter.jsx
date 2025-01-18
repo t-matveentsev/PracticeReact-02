@@ -1,8 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import s from "./Counter.module.css";
 
 const Counter = () => {
-  const [counter, setCounter] = useState(0); // хук який дохзволяє нам зберігати та оновлювати значення
+  const [counter, setCounter] = useState(0); // хук який дохзволяє нам зберігати та оновлювати
+
+  useEffect(() => {
+    console.log("Pages created");
+  }, []);
+
+  useEffect(() => {
+    console.log("Counter change", counter);
+  }, [counter]);
 
   const handleMinusClick = () => {
     if (counter < 1) {
