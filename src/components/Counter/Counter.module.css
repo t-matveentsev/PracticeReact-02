@@ -4,6 +4,9 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  & input {
+    margin-bottom: 8px;
+  }
 }
 
 .title {
