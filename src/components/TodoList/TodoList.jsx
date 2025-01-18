@@ -1,11 +1,21 @@
-import { useState } from "react";
-import todosData from "../../assets/todos.json";
+import { useEffect, useState } from "react";
 import TodoItem from "./TodoItem";
 import s from "./TodoList.module.css";
 
 const TodoList = () => {
-  const [todos, setTodos] = useState(todosData);
+  const [todos, setTodos] = useState(() => {
+    const saveData = JSON.parse(localStorage.getItem("todos"));
+    if (saveData?.length) {
+      return saveData;
+    }
+    return [];
+  });
+  // const [todos, setTodos] = useState(() => JSON.parse(localStorage.getItem("todos")) ?? []); easy alternative to what is written above
   const [newString, setNewString] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   const handleDelete = (id) => {
     const newData = todos.filter((item) => item.id != id);
